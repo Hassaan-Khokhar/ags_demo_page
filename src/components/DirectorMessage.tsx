@@ -9,7 +9,7 @@ export const DirectorMessage: React.FC<DirectorMessageProps> = ({
   onOpenDirectorModal,
 }) => {
   return (
-    <section className="py-16 sm:py-24 bg-[#f7f9fb]">
+    <section className="py-10 sm:py-14 bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
         <div className="bg-white rounded-[2rem] p-8 md:p-12 lg:p-16 shadow-blue-tint border border-[#c5c5d4]/10 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           <div className="w-full lg:w-1/3 flex-shrink-0">

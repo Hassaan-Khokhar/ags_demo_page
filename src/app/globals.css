@@ -126,16 +126,15 @@
   transform: translate(-50%, -75%);
 }
 
-/* Group Hover Card Fill Animations */
-.card-fill-blue,
-.card-fill-red {
+/* ===== Flip-Flop Card Color Swap ===== */
+.flipflop-card {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transition: background-color 0.95s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-fill-blue::before,
-.card-fill-red::before {
+.flipflop-card::before {
   content: '';
   position: absolute;
   top: 100%;
@@ -148,15 +147,19 @@
   z-index: -1;
 }
 
-.card-fill-blue::before {
+/* --- Hover EITHER card: colors SWAP (flip-flop) --- */
+/* Left card (default red) fills BLUE */
+.flipflop--left .flipflop-card--left::before,
+.flipflop--right .flipflop-card--left::before {
   background-color: #002a8f;
-}
-
-.card-fill-red::before {
-  background-color: #E50000;
-}
-
-.group:hover .card-fill-blue::before,
-.group:hover .card-fill-red::before {
   transform: translate(-50%, -75%);
 }
+
+/* Right card (default blue) fills RED */
+.flipflop--left .flipflop-card--right::before,
+.flipflop--right .flipflop-card--right::before {
+  background-color: #E50000;
+  transform: translate(-50%, -75%);
+}
+
+
