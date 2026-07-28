@@ -112,7 +112,7 @@ export const FACULTY: FacultyMember[] = [
     image:
       'https://arqamgrammarschools.edu.pk/storage/images/YhsKvwkMRtzw2v3dyUWmakYJqjbbDizg0H8DjMSP.png',
     bio: 'Leading our Advanced Physics and Molecular Biology research lab for 12 years with a passion for student STEM discovery.',
-    education: 'Ph.D. in Physics, Oxford University',
+    education: 'M.Sc. Physics',
     experience: '14+ Years in Secondary & Advanced Higher Education',
     email: 'sarah.jenkins@arqamgrammar.edu',
   },
@@ -123,7 +123,7 @@ export const FACULTY: FacultyMember[] = [
     image:
       'https://arqamgrammarschools.edu.pk/storage/images/teDlMEldAVuGG0sXrKaQLQdY69vZKmRqZd2BOYPk.png',
       bio: 'International Math Olympiad coach specializing in Calculus, Probability, and algorithmic problem-solving.',
-    education: 'M.Sc. Applied Mathematics, MIT',
+    education: 'M.Sc. Applied Mathematics',
     experience: '10+ Years Teaching Calculus & Algebra',
     email: 'david.chen@arqamgrammar.edu',
   },
@@ -134,7 +134,7 @@ export const FACULTY: FacultyMember[] = [
     image:
       'https://arqamgrammarschools.edu.pk/storage/images/PbVqIALYf8eNhcx3R72K2CXC8TqrM65ihL5KsdkW.png',
     bio: 'Director of the Arqam Drama Society and English Literature program, encouraging expressive storytelling and critical literary critique.',
-    education: 'M.A. English Literature, Cambridge University',
+    education: 'M.A. English Literature',
     experience: '8+ Years in Creative Writing & Humanities',
     email: 'emily.roberts@arqamgrammar.edu',
   },
