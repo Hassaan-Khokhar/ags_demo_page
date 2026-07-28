@@ -125,3 +125,38 @@
 .btn-fill-blue:hover::before {
   transform: translate(-50%, -75%);
 }
+
+/* Group Hover Card Fill Animations */
+.card-fill-blue,
+.card-fill-red {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-fill-blue::before,
+.card-fill-red::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 250%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  transition: transform 0.95s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.card-fill-blue::before {
+  background-color: #002a8f;
+}
+
+.card-fill-red::before {
+  background-color: #E50000;
+}
+
+.group:hover .card-fill-blue::before,
+.group:hover .card-fill-red::before {
+  transform: translate(-50%, -75%);
+}

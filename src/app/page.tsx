@@ -17,16 +17,13 @@ import { Footer } from '../components/Footer';
 import { DirectorModal } from '../components/DirectorModal';
 import { FacultyModal } from '../components/FacultyModal';
 import { LightboxModal } from '../components/LightboxModal';
-import { StoryModal } from '../components/StoryModal';
 import { ComingSoonModal } from '../components/ComingSoonModal';
 
 import { FacultyMember, GalleryItem } from '../types';
 
 export default function Page() {
-  // Modal states
   const [comingSoonOpen, setComingSoonOpen] = useState(false);
   const [directorOpen, setDirectorOpen] = useState(false);
-  const [storyOpen, setStoryOpen] = useState(false);
 
   const [selectedFaculty, setSelectedFaculty] = useState<FacultyMember | null>(null);
   const [selectedGalleryItem, setSelectedGalleryItem] = useState<GalleryItem | null>(null);
@@ -43,7 +40,7 @@ export default function Page() {
         onOpenLogin={() => setComingSoonOpen(true)}
         onOpenAcademics={() => setComingSoonOpen(true)}
         onOpenTour={() => setComingSoonOpen(true)}
-        onOpenStory={() => setStoryOpen(true)}
+        onOpenStory={() => setComingSoonOpen(true)}
         onOpenCareers={() => setComingSoonOpen(true)}
       />
 
@@ -60,7 +57,7 @@ export default function Page() {
         <StatsRow />
 
         {/* 3. Welcome Section */}
-        <WelcomeSection onOpenStory={() => setStoryOpen(true)} />
+        <WelcomeSection onOpenStory={() => setComingSoonOpen(true)} />
 
         {/* 4. The Arqam Advantage Cards */}
         <AdvantageSection />
@@ -78,12 +75,11 @@ export default function Page() {
         <EventsAndCalendar />
       </main>
 
-      {/* Footer */}
       <Footer
         onOpenApply={() => setComingSoonOpen(true)}
         onOpenAcademics={() => setComingSoonOpen(true)}
         onOpenTour={() => setComingSoonOpen(true)}
-        onOpenStory={() => setStoryOpen(true)}
+        onOpenStory={() => setComingSoonOpen(true)}
         onOpenComingSoon={() => setComingSoonOpen(true)}
       />
 
@@ -92,7 +88,6 @@ export default function Page() {
       <DirectorModal isOpen={directorOpen} onClose={() => setDirectorOpen(false)} />
       <FacultyModal faculty={selectedFaculty} onClose={() => setSelectedFaculty(null)} />
       <LightboxModal item={selectedGalleryItem} onClose={() => setSelectedGalleryItem(null)} />
-      <StoryModal isOpen={storyOpen} onClose={() => setStoryOpen(false)} />
     </div>
   );
 }

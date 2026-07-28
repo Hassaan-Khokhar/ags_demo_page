@@ -15,9 +15,9 @@ export const EventsAndCalendar: React.FC = () => {
   return (
     <section className="py-12 sm:py-16 bg-[#f7f9fb] pb-16 sm:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 group">
           {/* Box 1: Upcoming Event */}
-          <div className="bg-[#E50000] rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-white shadow-lg relative overflow-hidden min-h-[280px]">
+          <div className="bg-[#E50000] card-fill-blue rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-white shadow-lg relative overflow-hidden min-h-[280px]">
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
             <div className="flex items-center justify-between mb-8 relative z-10">
               <span className="font-label-md uppercase tracking-wider text-white/90 text-xs sm:text-sm font-bold">
@@ -39,7 +39,7 @@ export const EventsAndCalendar: React.FC = () => {
           {/* Box 2: Academic Calendar */}
           <button
             onClick={handleDownloadCalendar}
-            className="bg-[#002a8f] rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-left group overflow-hidden relative shadow-lg min-h-[280px] btn-fill-red transition-all cursor-pointer"
+            className="bg-[#002a8f] card-fill-red rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-left overflow-hidden relative shadow-lg min-h-[280px] cursor-pointer"
           >
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -mr-24 -mt-24 blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
             <div className="relative z-10 pr-16">
@@ -50,7 +50,7 @@ export const EventsAndCalendar: React.FC = () => {
                 Download or view the official 2024-2025 school schedule, term dates, and examination timetables.
               </p>
             </div>
-            <span className="material-symbols-outlined absolute right-8 bottom-8 text-[48px] text-white/40 group-hover:text-white transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-110">
+            <span className="material-symbols-outlined absolute right-8 bottom-8 text-[48px] text-white/40 hover:text-white transition-all duration-300 hover:-translate-y-2 hover:scale-110">
               download
             </span>
           </button>
