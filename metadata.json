@@ -1,0 +1,6 @@
+{
+  "name": "Arqam Grammar Schools",
+  "description": "Official web application for Arqam Grammar Schools featuring curriculum highlights, campus life, admissions, faculty, and interactive tour booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
