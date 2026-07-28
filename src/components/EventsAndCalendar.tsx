@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 export const EventsAndCalendar: React.FC = () => {
   const [calendarDownloaded, setCalendarDownloaded] = useState(false);
+  const [hovered, setHovered] = useState<'none' | 'left' | 'right'>('none');
 
   const handleDownloadCalendar = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -12,12 +13,23 @@ export const EventsAndCalendar: React.FC = () => {
     }, 200);
   };
 
+  // Build the parent grid class based on which card is hovered
+  const gridClass = [
+    'grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 flipflop-grid',
+    hovered === 'left' ? 'flipflop--left' : '',
+    hovered === 'right' ? 'flipflop--right' : '',
+  ].join(' ');
+
   return (
-    <section className="py-12 sm:py-16 bg-[#f7f9fb] pb-16 sm:pb-24">
+    <section className="py-10 sm:py-14 bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 group">
+        <div className={gridClass}>
           {/* Box 1: Upcoming Event */}
-          <div className="bg-[#E50000] card-fill-blue rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-white shadow-lg relative overflow-hidden min-h-[280px]">
+          <div
+            className="flipflop-card flipflop-card--left bg-[#E50000] rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-white shadow-lg relative overflow-hidden min-h-[280px]"
+            onMouseEnter={() => setHovered('left')}
+            onMouseLeave={() => setHovered('none')}
+          >
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
             <div className="flex items-center justify-between mb-8 relative z-10">
               <span className="font-label-md uppercase tracking-wider text-white/90 text-xs sm:text-sm font-bold">
@@ -39,7 +51,9 @@ export const EventsAndCalendar: React.FC = () => {
           {/* Box 2: Academic Calendar */}
           <button
             onClick={handleDownloadCalendar}
-            className="bg-[#002a8f] card-fill-red rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-left overflow-hidden relative shadow-lg min-h-[280px] cursor-pointer"
+            onMouseEnter={() => setHovered('right')}
+            onMouseLeave={() => setHovered('none')}
+            className="flipflop-card flipflop-card--right bg-[#002a8f] rounded-[2rem] p-8 md:p-12 flex flex-col justify-center text-left overflow-hidden relative shadow-lg min-h-[280px] cursor-pointer group"
           >
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -mr-24 -mt-24 blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
             <div className="relative z-10 pr-16">

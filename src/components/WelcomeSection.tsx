@@ -6,7 +6,7 @@ interface WelcomeSectionProps {
 
 export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onOpenStory }) => {
   return (
-    <section className="py-16 sm:py-24 bg-[#f7f9fb]">
+    <section className="py-10 sm:py-14 bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">

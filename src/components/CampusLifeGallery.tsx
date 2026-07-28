@@ -10,9 +10,9 @@ export const CampusLifeGallery: React.FC<CampusLifeGalleryProps> = ({
   onSelectImage,
 }) => {
   return (
-    <section className="py-16 sm:py-24 bg-[#f7f9fb]" id="campus-life">
+    <section className="py-10 sm:py-14 bg-[#f7f9fb]" id="campus-life">
       <div className="max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="font-headline-lg text-3xl sm:text-4xl text-[#002a8f] mb-4 font-bold">
             Campus Life
           </h2>
